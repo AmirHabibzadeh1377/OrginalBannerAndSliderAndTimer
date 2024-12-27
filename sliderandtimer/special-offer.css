@@ -1,0 +1,81 @@
+.special-offer-slider {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    background-color: green;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.special-offer-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 80%;
+}
+
+.product-box {
+    flex: 0 0 20%;
+    /* Each product takes 20% of the width (5 products per slide) */
+    margin-right: 5px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    height: 320px;
+    background-color: white;
+}
+
+.product-box:nth-child(2),
+.product-box:nth-child(2) img{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.product-box-end {
+    flex: 0 0 20%;
+    margin-right: 5px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    height: 320px;
+    background-color: white;
+    margin-left: 250px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.product-box img {
+    display: inline-block;
+    height: 150px;
+    width: 100%;
+}
+
+.start-special-offer,
+.end-special-offer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #c70000;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.start-special-offer {
+    left: 10px;
+}
+
+.end-special-offer {
+    right: 10px;
+}
+
+.start-special-offer:hover,
+.end-special-offer:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
